@@ -1,0 +1,49 @@
+ AWS Auto Scaling with Security Groups
+
+#### **Objective**
+Create an AWS instance using the auto-scaling method that automatically adjusts the number of instances based on network load, ensuring secure communication and access control through security groups.
+
+---
+
+#### **1. Auto Scaling Setup**
+
+- **Step 1**: Log in to the [AWS Management Console](https://aws.amazon.com/console/).
+  
+- **Step 2**: Navigate to **EC2 Dashboard** > **Auto Scaling**.
+
+- **Step 3**: Click **Create Auto Scaling Group**.
+
+- **Step 4**: Choose a **Launch Template** or **Launch Configuration**. If you don’t have one:
+  - Click **Create launch configuration**.
+  - Choose the instance type (e.g., t2.micro).
+  - Configure details such as storage, key pairs, and security groups (discussed in Step 3 below).
+  - Finalize and name your launch configuration.
+
+- **Step 5**: Set up scaling policies based on network load:
+  - Under "Scaling policies," choose **Target Tracking**.
+  - Set the target CPU utilization to a threshold (e.g., 70%).
+  - This ensures that when the load goes above this threshold, instances will automatically be added, and when it decreases, instances will be removed.
+
+---
+
+#### **2. Security Groups Setup**
+
+- **Step 1**: While creating your Auto Scaling group, under the **Security Groups** section, create or choose an existing security group.
+
+- **Step 2**: Ensure that the security group allows:
+  - **Inbound traffic**: HTTP (port 80), HTTPS (port 443), and SSH (port 22) from trusted IP ranges.
+  - **Outbound traffic**: Open to all for outbound requests.
+  
+- **Step 3**: Ensure proper **access control** to allow secure communication between instances and any databases or services they need to interact with.
+
+---
+
+#### **3. Testing and Monitoring**
+
+- **Step 1**: After setting up the Auto Scaling group, increase load on the system by generating traffic or using a load-testing tool (like Apache JMeter or AWS CloudWatch).
+
+- **Step 2**: Monitor the scaling behavior in **EC2 > Auto Scaling** to ensure additional instances are launched when the load increases and terminated when it decreases.
+
+- **Step 3**: Review security group rules in the **EC2 Dashboard** to confirm secure access.
+
+---
