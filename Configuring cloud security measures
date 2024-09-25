@@ -1,0 +1,47 @@
+
+
+# Task 3: Configuring Cloud Security Measures
+
+## Objective
+Enhance cloud infrastructure security by implementing best practices and ensuring compliance with industry standards and regulations.
+
+## Key Security Measures Implemented
+
+### 1. **Identity and Access Management (IAM) Configuration**
+   - **Objective**: Ensure secure access to cloud resources.
+   - **Actions**:
+     - Implemented IAM roles to grant permissions based on the principle of least privilege.
+     - Configured multi-factor authentication (MFA) for users accessing critical resources.
+     - Set up fine-grained policies to control access to specific resources.
+
+### 2. **Firewall and Security Groups Setup**
+   - **Objective**: Protect cloud resources from unauthorized network access.
+   - **Actions**:
+     - Created security groups to define inbound and outbound traffic rules.
+     - Configured network access control lists (ACLs) to manage traffic at the subnet level.
+     - Restricted access to sensitive resources based on IP address, ensuring that only authorized users can connect.
+
+### 3. **Encryption for Data at Rest and in Transit**
+   - **Objective**: Safeguard sensitive data from unauthorized access or interception.
+   - **Actions**:
+     - Enabled encryption for all data stored (at rest) using industry-standard algorithms.
+     - Configured SSL/TLS protocols for secure data transfer (in transit) between client and server.
+
+### 4. **Monitoring Security Logs and Alerts**
+   - **Objective**: Maintain real-time visibility into security events and threats.
+   - **Actions**:
+     - Enabled logging for key cloud services to track access and modification events.
+     - Configured alerts to notify administrators of suspicious activity or policy violations.
+     - Integrated monitoring tools (such as AWS CloudWatch or Azure Monitor) to track security events and respond quickly.
+
+### 5. **Regular Security Audits and Assessments**
+   - **Objective**: Ensure ongoing compliance with security policies and industry standards.
+   - **Actions**:
+     - Scheduled regular audits to review IAM roles, permissions, and access policies.
+     - Performed security assessments to identify potential vulnerabilities and misconfigurations.
+     - Implemented remediation measures for any discovered security gaps.
+
+## Conclusion
+By configuring these security measures, the cloud infrastructure is better protected against unauthorized access and threats. Continuous monitoring and regular security assessments ensure ongoing security compliance and help mitigate potential risks.
+
+---
